@@ -1,0 +1,29 @@
+@use '../../styles/tokens' as *;
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0 0 1.35rem;
+  color: $muted;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  &::before {
+    width: 0.42rem;
+    height: 0.42rem;
+    border-radius: 50%;
+    background: $accent;
+    content: "";
+  }
+}
+
+.light {
+  color: rgba(255, 255, 255, 0.62);
+
+  &::before {
+    background: #d18a67;
+  }
+}

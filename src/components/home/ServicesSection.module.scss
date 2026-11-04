@@ -1,0 +1,27 @@
+@use '../../styles/tokens' as *;
+
+.section {
+  padding: clamp(5rem, 10vw, 9rem) 0;
+  background: $paper-light;
+  scroll-margin-top: 6rem;
+}
+
+.heading {
+  margin-bottom: 3.3rem;
+
+  h2 {
+    max-width: 700px;
+    margin: 0;
+    font-size: clamp(2.2rem, 4vw, 4rem);
+    font-weight: 520;
+    letter-spacing: -0.06em;
+    line-height: 1.05;
+  }
+}
+
+.intro {
+  margin-bottom: 0;
+  color: $muted;
+  font-size: 0.94rem;
+  line-height: 1.7;
+}

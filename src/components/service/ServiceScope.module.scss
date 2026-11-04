@@ -1,0 +1,71 @@
+@use '../../styles/tokens' as *;
+
+.section {
+  padding: clamp(5rem, 10vw, 9rem) 0;
+  background: $paper-light;
+
+  h2 {
+    max-width: 520px;
+    margin: 0 0 1rem;
+    font-size: clamp(2.2rem, 4vw, 4rem);
+    font-weight: 520;
+    letter-spacing: -0.06em;
+    line-height: 1.05;
+  }
+}
+
+.intro {
+  max-width: 430px;
+  color: $muted;
+  font-size: 0.94rem;
+  line-height: 1.7;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: grid;
+    grid-template-columns: 2.4rem 1fr 1rem;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 0;
+    border-top: 1px solid $line;
+    animation: list-enter 600ms both;
+
+    @for $i from 1 through 5 {
+      &:nth-child(#{$i}) {
+        animation-delay: #{$i * 80}ms;
+      }
+    }
+
+    > span {
+      color: $muted;
+      font-size: 0.72rem;
+    }
+
+    p {
+      margin: 0;
+      font-size: clamp(0.95rem, 1.4vw, 1.12rem);
+      transition: color 180ms ease;
+    }
+
+    &:hover p {
+      color: $accent;
+    }
+  }
+}
+
+@keyframes list-enter {
+  from {
+    opacity: 0;
+    transform: translateX(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

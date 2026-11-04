@@ -1,0 +1,103 @@
+@use '../../styles/tokens' as *;
+
+.timeline {
+  position: relative;
+  padding: 0 0 0 2.15rem;
+}
+
+.rail,
+.fill {
+  position: absolute;
+  top: 0.4rem;
+  bottom: 1.7rem;
+  left: 0.38rem;
+  width: 1px;
+}
+
+.rail {
+  background: $line;
+}
+
+.fill {
+  bottom: auto;
+  height: var(--timeline-progress, 0%);
+  max-height: calc(100% - 2.1rem);
+  background: $accent;
+  box-shadow: 0 0 12px color-mix(in srgb, $accent 55%, transparent);
+  transition: height 100ms linear;
+}
+
+.item {
+  position: relative;
+  padding: 1.7rem 0;
+  border-top: 1px solid $line;
+  animation: rise-in 650ms both;
+
+  @for $i from 1 through 5 {
+    &:nth-of-type(#{$i}) {
+      animation-delay: #{$i * 90}ms;
+    }
+  }
+
+  &:last-child {
+    border-bottom: 1px solid $line;
+  }
+
+  h3 {
+    margin: 0.2rem 0;
+    font-size: 1.3rem;
+    font-weight: 550;
+    letter-spacing: -0.035em;
+  }
+}
+
+.marker {
+  position: absolute;
+  top: 2rem;
+  left: -2.13rem;
+  width: 0.58rem;
+  height: 0.58rem;
+  border: 1px solid $muted;
+  border-radius: 50%;
+  background: $paper;
+  box-shadow: 0 0 0 5px $paper;
+  transition: background 250ms ease, border-color 250ms ease, transform 250ms ease, box-shadow 250ms ease;
+}
+
+.active .marker {
+  transform: scale(1.2);
+  border-color: $accent;
+  background: $accent;
+  box-shadow: 0 0 0 5px $paper, 0 0 0 8px color-mix(in srgb, $accent 20%, transparent);
+}
+
+.period {
+  margin: 0;
+  color: $muted;
+  font-size: 0.72rem;
+}
+
+.organization {
+  margin: 0 0 0.8rem;
+  color: $muted;
+  font-size: 0.85rem;
+}
+
+.detail {
+  margin: 0.3rem 0;
+  color: $muted-strong;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

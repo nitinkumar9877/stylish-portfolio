@@ -1,0 +1,11 @@
+.float {
+  transform: translate3d(0, var(--scroll-float, 0), 0);
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .float {
+    transform: none;
+    will-change: auto;
+  }
+}

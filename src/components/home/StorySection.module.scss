@@ -1,0 +1,24 @@
+@use '../../styles/tokens' as *;
+
+.section {
+  padding: clamp(5rem, 10vw, 9rem) 0;
+  background: $paper;
+  scroll-margin-top: 6rem;
+}
+
+.intro {
+  h2 {
+    max-width: 440px;
+    margin-bottom: 1rem;
+    font-size: clamp(2.2rem, 4vw, 4rem);
+    font-weight: 520;
+    letter-spacing: -0.06em;
+    line-height: 1.05;
+  }
+
+  > p:last-child {
+    max-width: 390px;
+    color: $muted;
+    line-height: 1.7;
+  }
+}
