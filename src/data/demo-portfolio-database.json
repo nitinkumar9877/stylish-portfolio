@@ -1,0 +1,280 @@
+{
+  "schemaVersion": "1.0",
+  "id": "demo-portfolio-rishi-thakor",
+  "status": "published",
+  "updatedAt": "2026-11-04T00:00:00.000Z",
+  "site": {
+    "title": "Rishi Thakor — Independent Designer & Developer",
+    "description": "Freelance web and app development, UI/UX design and graphic design by Rishi Thakor.",
+    "baseUrl": "https://example.com",
+    "locale": "en-IN",
+    "copyrightTemplate": "© {year} {name}. Made with care."
+  },
+  "portfolio": {
+    "name": "Rishi Thakor",
+    "role": "Independent designer & developer",
+    "location": "Remote-first, worldwide",
+    "email": "rishithakor218@gmail.com",
+    "phone": "",
+    "headline": "Thoughtful digital work, from first sketch to launch.",
+    "introduction": "I’m Rishi — a photographer, graphic designer, UI/UX designer and developer. I help people turn good ideas into clear, useful digital experiences.",
+    "availability": "Available for select projects",
+    "profileImage": {
+      "url": "/images/profile.jpg",
+      "alt": "Portrait of Rishi Thakor"
+    },
+    "resumeUrl": "/files/rishi-thakor-resume.pdf"
+  },
+  "navigation": {
+    "homeLabel": "Home",
+    "storyLabel": "My story",
+    "contactLabel": "Let's talk",
+    "serviceLinks": [
+      {
+        "slug": "web-development",
+        "label": "Web"
+      },
+      {
+        "slug": "app-development",
+        "label": "Apps"
+      },
+      {
+        "slug": "ui-ux-design",
+        "label": "UI/UX"
+      },
+      {
+        "slug": "graphic-design",
+        "label": "Graphic"
+      }
+    ]
+  },
+  "hero": {
+    "eyebrow": "Independent designer & developer",
+    "primaryAction": {
+      "label": "Start a project",
+      "href": "/#contact"
+    },
+    "secondaryAction": {
+      "label": "Explore services",
+      "href": "/#services"
+    }
+  },
+  "services": [
+    {
+      "id": "service-web-development",
+      "slug": "web-development",
+      "number": "01",
+      "name": "Web Development",
+      "shortName": "Web",
+      "description": "Fast, thoughtful websites built to make your next idea real.",
+      "intro": "From the first wireframe to a site that is ready to go live, I bring design and development together to make the whole experience feel considered.",
+      "deliverables": [
+        "Discovery, goals and project planning",
+        "UX, visual design and responsive layouts",
+        "Front-end and back-end development",
+        "Technical SEO and performance",
+        "Testing, launch and ongoing support"
+      ],
+      "accent": "#a65b3c",
+      "icon": "web",
+      "featured": true,
+      "sortOrder": 1,
+      "seo": {
+        "title": "Web Development | Rishi Thakor",
+        "description": "Fast, thoughtful websites built to make your next idea real."
+      }
+    },
+    {
+      "id": "service-app-development",
+      "slug": "app-development",
+      "number": "02",
+      "name": "App Development",
+      "shortName": "Apps",
+      "description": "Useful app experiences, shaped around the people who use them.",
+      "intro": "I take apps from an early product idea through to a polished release, keeping the experience intuitive and the implementation dependable.",
+      "deliverables": [
+        "Product scoping and user flows",
+        "Interface design and prototyping",
+        "App development and integrations",
+        "Quality testing across devices",
+        "Store launch and post-release updates"
+      ],
+      "accent": "#8a7753",
+      "icon": "mobile",
+      "featured": true,
+      "sortOrder": 2,
+      "seo": {
+        "title": "App Development | Rishi Thakor",
+        "description": "Useful app experiences shaped around the people who use them."
+      }
+    },
+    {
+      "id": "service-ui-ux-design",
+      "slug": "ui-ux-design",
+      "number": "03",
+      "name": "UI/UX Design",
+      "shortName": "UI/UX",
+      "description": "Clear product journeys, from the first user flow to final UI.",
+      "intro": "Good interface design starts with understanding. I connect user needs and business goals, then turn that understanding into practical, polished product experiences.",
+      "deliverables": [
+        "Brand and business needs analysis",
+        "User and competitor research",
+        "Information architecture and user flows",
+        "Wireframes and high-fidelity UI",
+        "Interactive prototypes and usability testing"
+      ],
+      "accent": "#74816d",
+      "icon": "layout",
+      "featured": true,
+      "sortOrder": 3,
+      "seo": {
+        "title": "UI/UX Design | Rishi Thakor",
+        "description": "Clear product journeys from the first user flow to final UI."
+      }
+    },
+    {
+      "id": "service-graphic-design",
+      "slug": "graphic-design",
+      "number": "04",
+      "name": "Graphic Design",
+      "shortName": "Graphic",
+      "description": "Distinctive visual content that feels true to your brand.",
+      "intro": "From a clear visual direction to the final set of assets, I create graphic work that gives a brand a consistent and recognizable voice.",
+      "deliverables": [
+        "Brand, audience and tone analysis",
+        "Visual direction built around your guidelines",
+        "Posters and social media creatives",
+        "Strong typography and clear hierarchy",
+        "Platform-ready files in every format you need"
+      ],
+      "accent": "#a4552c",
+      "icon": "palette",
+      "featured": true,
+      "sortOrder": 4,
+      "seo": {
+        "title": "Graphic Design | Rishi Thakor",
+        "description": "Distinctive visual content that feels true to your brand."
+      }
+    }
+  ],
+  "story": {
+    "eyebrow": "Good work comes from staying curious.",
+    "heading": "A designer's eye, a developer's curiosity.",
+    "description": "I bring a designer's eye and a developer's curiosity to every project. Here's a little of the path that got me here."
+  },
+  "experience": [
+    {
+      "id": "experience-independent-freelancer",
+      "period": "Oct 2026 — Now",
+      "role": "Independent freelancer",
+      "organization": "Working for myself, remote-first",
+      "details": [
+        "Websites, iOS apps, interfaces and brand creatives, carried from the first sketch to launch.",
+        "Working directly with clients, wherever they are."
+      ],
+      "sortOrder": 1
+    },
+    {
+      "id": "experience-himspring",
+      "period": "Jul 2026 — Sep 2026",
+      "role": "Graphic designer",
+      "organization": "Himspring LLC",
+      "details": [
+        "Managed visual content across social media for real estate, luxury water bottle and clothing brands.",
+        "Designed social media creatives, stories and carousels in Adobe Illustrator."
+      ],
+      "sortOrder": 2
+    },
+    {
+      "id": "experience-quicko",
+      "period": "Jan 2026 — Jun 2026",
+      "role": "UI/UX designer",
+      "organization": "Quicko Pvt Ltd, Ahmedabad",
+      "details": [
+        "Designed website interfaces and user experiences in Figma, focused on usability and visual clarity.",
+        "Built no-code web pages and interactive financial tools in Framer."
+      ],
+      "sortOrder": 3
+    },
+    {
+      "id": "experience-wbt",
+      "period": "Jan 2025 — May 2025",
+      "role": "Graphic designer intern",
+      "organization": "WBT, Delhi · Remote",
+      "details": [
+        "Designed pitch decks and presentations to communicate ideas and business concepts.",
+        "Created social media creatives and visual assets for branding and marketing."
+      ],
+      "sortOrder": 4
+    }
+  ],
+  "education": {
+    "id": "education-pdeu",
+    "period": "Jul 2022 — May 2026",
+    "qualification": "B.Tech, Computer Science",
+    "institution": "Pandit Deendayal Energy University (PDEU)",
+    "description": "Four years of computer science: where it all started, with code in the classroom and design on the side. Graduated in May 2026, with internships and real projects already under way."
+  },
+  "projects": [
+    {
+      "id": "project-example-website",
+      "slug": "example-website",
+      "title": "Example product website",
+      "summary": "A conversion-focused marketing website for a growing product team.",
+      "description": "Replace this record with a real case study when projects are added to the portfolio.",
+      "services": [
+        "web-development",
+        "ui-ux-design"
+      ],
+      "role": "Design and development",
+      "year": 2026,
+      "status": "draft",
+      "featured": false,
+      "coverImage": {
+        "url": "/images/projects/example-website.jpg",
+        "alt": "Example product website preview"
+      },
+      "url": ""
+    }
+  ],
+  "contact": {
+    "eyebrow": "Have a good one in mind?",
+    "heading": "Let's make it happen.",
+    "buttonLabel": "Get in touch",
+    "email": "rishithakor218@gmail.com",
+    "successMessage": "Thanks — your message has been received.",
+    "errorMessage": "Something went wrong. Please email me directly."
+  },
+  "socialLinks": [
+    {
+      "platform": "linkedin",
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/example",
+      "enabled": true
+    },
+    {
+      "platform": "github",
+      "label": "GitHub",
+      "url": "https://github.com/example",
+      "enabled": true
+    },
+    {
+      "platform": "instagram",
+      "label": "Instagram",
+      "url": "https://www.instagram.com/example",
+      "enabled": false
+    }
+  ],
+  "appearance": {
+    "defaultTheme": "system",
+    "allowThemeToggle": true,
+    "light": {
+      "accent": "#9c573b",
+      "logoText": "RT."
+    },
+    "dark": {
+      "accent": "#d18a67",
+      "logoText": "RT."
+    }
+  }
+}

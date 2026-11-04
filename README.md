@@ -55,6 +55,8 @@ Set `PORTFOLIO_API_URL` to the backend base URL. The app requests `GET <PORTFOLI
 
 With no API URL set, the app uses the typed local data in `src/models/portfolio.ts`. Pages are rendered dynamically so setting `PORTFOLIO_API_URL` at runtime makes fresh backend data available on the next request. Invalid API responses and failed requests raise explicit errors instead of silently rendering incomplete data.
 
+`src/data/demo-portfolio-database.json` contains a complete seed document for building an admin form or API. The frontend currently consumes the required `portfolio`, `services`, `experience`, and `education` fields; the additional `hero`, `story`, `projects`, `contact`, `socialLinks`, and `appearance` sections are ready for future frontend wiring.
+
 ## Structure
 
 - `src/app`: App Router pages, layout, and global styles.
