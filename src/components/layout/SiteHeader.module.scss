@@ -5,25 +5,51 @@
   top: 0.85rem;
   right: 0;
   left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding-inline: 0.7rem;
   z-index: 5;
   pointer-events: none;
   animation: header-enter 700ms 80ms both;
 }
 
 .inner {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
+  display: flex;
   align-items: center;
-  column-gap: clamp(0.75rem, 1.8vw, 1.6rem);
-  width: min(100% - 2rem, 1280px);
- padding: 0.55rem 0.8rem 0.55rem 0.8rem;;
-  border: 1px solid color-mix(in srgb, $line 76%, transparent);
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--color-header) 92%, transparent);
-  box-shadow: 0 12px 40px var(--color-header-shadow);
-  backdrop-filter: blur(18px);
+  justify-content: space-between;
+  gap: 0.7rem;
+  width: 100%;
+  box-sizing: border-box;
   pointer-events: auto;
-  transition: background 250ms ease, box-shadow 250ms ease, border-color 250ms ease;
+}
+
+.identityBox,
+.navigationBox {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.identityBox {
+  flex: 0 1 auto;
+  justify-content: space-between;
+  gap: clamp(1.25rem, 4vw, 5rem);
+  padding: 0.55rem 0.7rem 0.55rem 0.8rem;
+  border-radius: 999px;
+}
+
+.navigationBox {
+  flex: 1 1 auto;
+  justify-content: center;
+  padding: 0.2rem 0.35rem;
+  border-radius: 999px;
+}
+
+.ropeLayer {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
 }
 
 .wordmark {
@@ -40,7 +66,7 @@
   display: flex;
   min-width: 0;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.15rem;
   color: $muted;
   font-size: clamp(0.7rem, 0.8vw, 0.8rem);
 
@@ -56,13 +82,6 @@
       color: $ink;
     }
   }
-}
-
-.actions {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: clamp(0.5rem, 1vw, 0.9rem);
 }
 
 .contact {
@@ -95,14 +114,27 @@
 
 @media (max-width: 767.98px) {
   .inner {
-    grid-template-columns: auto minmax(0, 1fr);
-    gap: 0.35rem 0.6rem;
-    border-radius: 1.3rem;
-    padding: 0.5rem 5.25rem 0.4rem 0.65rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.45rem;
+  }
+
+  .identityBox,
+  .navigationBox {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .identityBox {
+    padding: 0.5rem 0.7rem;
+  }
+
+  .navigationBox {
+    justify-content: stretch;
+    overflow: hidden;
   }
 
   .navigation {
-    grid-column: 1 / -1;
     width: 100%;
     justify-content: space-between;
     overflow-x: auto;
@@ -126,21 +158,9 @@
   .contact {
     padding: 0.6rem 0.85rem;
   }
-
-  .actions {
-    grid-column: 2;
-    grid-row: 1;
-    gap: clamp(0.75rem, 4vw, 1.25rem);
-  }
 }
 
 @media (max-width: 360px) {
-  .inner {
-    width: calc(100% - 1rem);
-    padding-right: 4.75rem;
-    padding-left: 0.5rem;
-  }
-
   .navigation a {
     letter-spacing: -0.035em;
   }
@@ -148,5 +168,303 @@
   .contact {
     padding-inline: 0.65rem;
     font-size: 0.72rem;
+  }
+}
+
+.inner {
+  border: 1px solid color-mix(in srgb, $line 76%, transparent);
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  border: 1px solid color-mix(in srgb, $line 76%, transparent);
+  background: color-mix(in srgb, var(--color-header) 92%, transparent);
+  box-shadow: 0 12px 40px var(--color-header-shadow);
+  backdrop-filter: blur(18px);
+  transition: background 250ms ease, box-shadow 250ms ease, border-color 250ms ease;
+  padding: 0.55rem 0.7rem 0.55rem 0.8rem;
+  border-radius: 999px;
+}
+
+// from their we start the gpt scss for the header component
+
+
+
+
+.header {
+  position: relative;
+  z-index: 1000;
+  width: 100%;
+  padding: 0.75rem 0.7rem;
+  box-sizing: border-box;
+
+  .inner {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: clamp(0.5rem, 1.5vw, 1.25rem);
+    box-sizing: border-box;
+  }
+
+  // Logo box
+  .identityBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    padding: 0.7rem 0.9rem;
+  }
+
+  .wordmark {
+    display: inline-flex;
+    align-items: center;
+    color: #f5f1ed;
+    text-decoration: none;
+    font-size: clamp(1.35rem, 2vw, 1.75rem);
+    font-weight: 800;
+    letter-spacing: -0.08em;
+    line-height: 1;
+
+    span {
+      color: #d58b65;
+    }
+  }
+
+  // Navigation box
+  .navigationBox {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem clamp(0.5rem, 1.5vw, 1.5rem);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+
+  .navigation {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(0.65rem, 2vw, 2rem);
+    min-width: 0;
+
+    a {
+      position: relative;
+      display: inline-block;
+      flex-shrink: 0;
+      color: rgba(245, 241, 237, 0.65);
+      text-decoration: none;
+      font-size: clamp(0.72rem, 0.9vw, 0.88rem);
+      font-weight: 500;
+      white-space: nowrap;
+      transition: color 0.25s ease;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -0.35rem;
+        width: 0;
+        height: 1px;
+        background: #d58b65;
+        transition: width 0.3s ease;
+      }
+
+      &:hover {
+        color: #fff;
+
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  // Contact button
+  .contact {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    min-width: max-content;
+    padding: 0.9rem 1.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+    background: #f3eee8;
+    color: #201e1c;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    white-space: nowrap;
+    transition:
+      background 0.3s ease,
+      color 0.3s ease,
+      transform 0.3s ease;
+
+    span {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      background: #d58b65;
+      color: #171514;
+      transform: translateY(-2px);
+
+      span {
+        transform: translate(3px, -3px);
+      }
+    }
+  }
+}
+
+// Medium laptops and smaller desktops
+@media (max-width: 1100px) {
+  .header {
+    .inner {
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      gap: 0.6rem;
+    }
+
+    .identityBox {
+      padding: 0.8rem;
+    }
+
+    .navigationBox {
+      padding: 0.8rem 0.6rem;
+    }
+
+    .navigation {
+      gap: clamp(0.5rem, 1.2vw, 1rem);
+
+      a {
+        font-size: 0.75rem;
+      }
+    }
+
+    .contact {
+      padding: 0.8rem 1rem;
+      font-size: 0.78rem;
+    }
+  }
+}
+
+// Tablets
+@media (max-width: 850px) {
+  .header {
+    .inner {
+      grid-template-columns: 1fr auto;
+      grid-template-areas:
+        "identity contact"
+        "navigation navigation";
+      gap: 0.65rem;
+    }
+
+    .identityBox {
+      grid-area: identity;
+      justify-self: start;
+      padding: 0.8rem 1rem;
+    }
+
+    .navigationBox {
+      grid-area: navigation;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0.85rem 0.6rem;
+    }
+
+    .navigation {
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 0.8rem 1.2rem;
+
+      a {
+        font-size: 0.8rem;
+      }
+    }
+
+    .contact {
+      grid-area: contact;
+      justify-self: end;
+    }
+  }
+}
+
+// Mobile phones
+@media (max-width: 520px) {
+  .header {
+    padding: 0.6rem 0.7rem;
+
+    .inner {
+      grid-template-columns: 1fr auto;
+      gap: 0.55rem;
+    }
+
+    .identityBox {
+      padding: 0.75rem 0.9rem;
+      border-radius: 0.9rem;
+    }
+
+    .wordmark {
+      font-size: 1.4rem;
+    }
+
+    .navigationBox {
+      padding: 0.85rem 0.65rem;
+      border-radius: 0.9rem;
+    }
+
+    .navigation {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      justify-items: center;
+      gap: 1rem 0.35rem;
+
+      a {
+        font-size: 0.72rem;
+        text-align: center;
+      }
+    }
+
+    .contact {
+      padding: 0.75rem 0.9rem;
+      font-size: 0.76rem;
+      gap: 0.4rem;
+    }
+  }
+}
+
+// Very small phones
+@media (max-width: 360px) {
+  .header {
+    .navigation {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      row-gap: 0.9rem;
+
+      a {
+        font-size: 0.68rem;
+      }
+    }
+
+    .contact {
+      padding: 0.7rem 0.75rem;
+      font-size: 0.7rem;
+    }
+  }
+}
+
+// Respect reduced-motion preferences
+@media (prefers-reduced-motion: reduce) {
+  .header {
+
+    *,
+    *::before,
+    *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+    }
   }
 }

@@ -1,8 +1,8 @@
 .assembly {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: clamp(0.75rem, 2.2vw, 2rem);
-  z-index: 8;
+  z-index: 9999;
   width: 4.125rem;
   height: calc(11.5rem + var(--pull-distance, 0px));
   pointer-events: none;
